@@ -1,0 +1,64 @@
+{
+    "medidas": [
+        {
+            "id": "001",
+            "nombre": "Caudal",
+            "puntos": [],
+            "medidas": [
+                "q0",
+                "CAUDAL"
+            ]
+        },
+        {
+            "id": "002",
+            "nombre": "Presión",
+            "puntos": [],
+            "medidas": [
+                "pA",
+                "pB",
+                "PRESION_ACTA"
+            ]
+        },
+        {
+            "id": "003",
+            "nombre": "Depósito de Cloro",
+            "puntos": [],
+            "medidas": [
+                "DEPOSITO_DE_CLORO"
+            ]
+        },
+        {
+            "id": "004",
+            "nombre": "Bomba",
+            "puntos": [],
+            "medidas": [
+                "PUMP_PERF_STATE"
+            ]
+        },
+        {
+            "id": "005",
+            "nombre": "Tanque",
+            "puntos": [],
+            "medidas": [
+                "H_TQ",
+                "altura"
+            ]
+        },
+        {
+            "id": "006",
+            "nombre": "Macro",
+            "puntos": [],
+            "medidas": [
+                "macro"
+            ]
+        },
+        {
+            "id": "007",
+            "nombre": "Reguladora",
+            "puntos": [],
+            "medidas": [
+                "reguladora"
+            ]
+        }
+    ]
+}

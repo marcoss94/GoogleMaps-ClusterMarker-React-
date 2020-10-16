@@ -1,0 +1,93 @@
+.flotante {
+    position: absolute;
+    /* top: 50%; */
+    /* right: 0; */
+    z-index: 90;
+    width: 90px;
+    /* height: 240px; */
+}
+
+.flotante button {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: absolute;
+    /* margin-right: 16px;
+    margin-bottom: 16px; */
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: .3s;
+}
+
+.flotante button span {
+    display: flex;
+    transition: .5s;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.botonF:click span {
+    transform: rotate(360deg);
+}
+
+.botonF:active {
+    transform: scale(1.1);
+}
+
+.botonF:active>span {
+    transform: rotate(360deg);
+    /* transition-duration: 1s; */
+}
+
+.flotante.rightTop {
+    right: 0;
+    top: 4rem;
+}
+
+.flotante.rightBottom {
+    right: 0;
+    bottom: 15%;
+}
+
+.flotante.rightMedio {
+    right: 0;
+    bottom: 50%;
+}
+
+.filtro-map {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 10px #888888;
+    position: absolute;
+    min-width: 250px;
+    max-width: 400px;
+    max-height: 400px;
+    position: fixed;
+    top: 7rem;
+    z-index: 80;
+    /* right: -100%; */
+    right: 3rem;
+    margin: 0;
+    padding: 1rem;
+    /* overflow: hidden; */
+    clip-path: circle(10px at 90% -10%);
+    -webkit-clip-path: circle(10px at 90% -10%);
+    transition: all 1s ease-in-out;
+    overflow: auto;
+}
+
+.filtro-map.active {
+    /* right: 3rem; */
+    clip-path: circle(800px at 99% -10%);
+    -webkit-clip-path: circle(800px at 99% -10%);
+    /* transition: 350ms; */
+}
+
+.badgeFiltro {
+    right: 20px;
+    top: 0;
+    position: absolute;
+}

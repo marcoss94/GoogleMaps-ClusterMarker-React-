@@ -1,0 +1,41 @@
+
+.icon_azul {
+    background: linear-gradient(180deg, #43BAFF 0%, #0087D6 100%);
+}
+
+.icon_verde {
+    background: linear-gradient(180deg, #5DC262 0%, #388E3C 100%);
+}
+
+.icon_amarillo {
+    background: linear-gradient(180deg, #FFC32A 0%, #DDA005 100%);
+}
+
+.icon_azulOscuro {
+    background: linear-gradient(180deg, #047982 0%, #01585f 100%);
+}
+
+.icon_error {
+    background: linear-gradient(180deg, #E36558 0%, #B53838 100%);
+}
+
+.icon_falla {
+    background: linear-gradient(180deg, #FC7012 0%, #E95E01 100%);
+}
+
+
+.fondo_error {
+    background: #FF6555;
+}
+
+.fondo_error > * >.tarjeta_modal_item_title, .fondo_error > * >.tarjeta_modal_item_value {
+    color: white;
+}
+
+.fondo_falla {
+    background: #FF9F0F;
+}
+
+.fondo_falla > * >.tarjeta_modal_item_title, .fondo_falla > * >.tarjeta_modal_item_value {
+    color: white;
+}
