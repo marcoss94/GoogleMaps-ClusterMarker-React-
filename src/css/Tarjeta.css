@@ -1,0 +1,27 @@
+.container_tarjetaList {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.container_tarjeta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+}
+
+.container_opciones {
+    display: flex;
+}
+
+.tarjeta {
+    border: 1px solid gray;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}

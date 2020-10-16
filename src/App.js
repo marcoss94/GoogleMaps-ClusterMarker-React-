@@ -32,12 +32,6 @@ function App() {
 
         <NavBar listAll={listPuntosM} />
 
-
-        {/* <Link to="/">Main</Link>
-        <Link to="/listado">Listado</Link>
-        <Link to="/mapa">Mapa</Link>
-        <Link to={{ pathname: "/tarjeta", state: { from: "root" } }}>Tarjeta</Link> */}
-
         <Switch>
           <Route path="/listado" component={Listado} />
           <Route path="/tarjeta" component={Tarjeta} />

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Listado() {
     return (
-        <div>
+        <div className="contenedor">
             Listado
         </div>
     )
