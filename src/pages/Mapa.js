@@ -87,7 +87,7 @@ function Mapa() {
 
         } else if (arrayType === "medidas") {
             if (value !== null && value?.length !== 0) {
-                setArraySistemas([])
+                // setArraySistemas([])
                 setArrayMedidas(value);
                 setFiltroBooll(true);
             } else {
@@ -101,6 +101,7 @@ function Mapa() {
                     setZoom(zoomServicio)
                 } else setZoom(12)
                 setArraySistemas(value);
+                setArrayMedidas([]);
                 setFiltroBooll(true);
             } else {
                 setZoom(7)
@@ -141,9 +142,9 @@ function Mapa() {
         if (arrayClientes.length !== 0) {
             // filtrado por clientes
             data_filter_Servicios = data_filter_Servicios.filter(item => {
-                var bool = false;
+                let bool = false;
                 arrayClientes.forEach(element => {
-                    var cliente = listClientes.find(aux => aux.id === element.value)
+                    let cliente = listClientes.find(aux => aux.id === element.value)
                     cliente.servicioID.forEach(index => {
                         if (item.id === index) {
                             bool = true;
@@ -157,7 +158,7 @@ function Mapa() {
         if (arrayServicios.length !== 0) {
             // filtrado por servicio si se selecciono un filtro de servicio
             data_filter_Servicios = data_filter_Servicios.filter(item => {
-                var bool = false;
+                let bool = false;
                 arrayServicios.forEach(element => {
                     if (item.id === element.value) {
                         bool = true;
@@ -168,16 +169,16 @@ function Mapa() {
         }
 
         // si se filtran los servicios tambien se filtran los sectores que esten en esos servicios.
-        var array = [];
-        var arrayP = [];
+        let array = [];
+        let arrayP = [];
         data_filter_Servicios.map(item => {
             item.sectorID.forEach(element => {
-                var aux = data_filter_Sectores.find(index => index.id === element)
+                let aux = data_filter_Sectores.find(index => index.id === element)
                 if (!array.some(item => item.id === (aux).id))
                     array.push(aux);
             })
             item.puntoID.forEach(element => {
-                var aux = data_filter_PuntosM.find(index => index.id === element)
+                let aux = data_filter_PuntosM.find(index => index.id === element)
                 if (!arrayP.some(item => item.id === (aux).id)) {
                     arrayP.push(aux);
 
@@ -190,7 +191,7 @@ function Mapa() {
         if (arraySistemas.length !== 0) {
             // filtrado por sectores si se selecciono un filtro de sector
             data_filter_Sectores = data_filter_Sectores.filter(item => {
-                var bool = false;
+                let bool = false;
                 arraySistemas.forEach(element => {
                     if (item.id === element.value) {
                         bool = true;
@@ -204,7 +205,7 @@ function Mapa() {
 
             // filtrado por tipos si se selecciono un filtro de tipo
             data_filter_Sectores = data_filter_Sectores.filter(item => {
-                var bool = false;
+                let bool = false;
                 arrayTiposSistemas.forEach(element => {
                     if (String(item.id).startsWith(element.value) || (!isNaN(parseInt(item.id)) && element.value === '#')) {
                         bool = true;
@@ -216,41 +217,41 @@ function Mapa() {
         }
 
         // filtro de puntos en dependencia de los sectores que queden si no hay filtro por medida
-        var arrayP = [];
+        let arrayPuntos = [];
         data_filter_Sectores.map(item => {
             if (item.tipo === 'sector') {
                 item.puntoID.forEach(element => {
-                    var aux = data_filter_PuntosM.find(index => index.id === element);
+                    let aux = data_filter_PuntosM.find(index => index.id === element);
                     // console.log(aux.id);
-                    if (!arrayP.some(item => item.id === (aux).id))
-                        arrayP.push(aux);
+                    if (!arrayPuntos.some(item => item.id === (aux).id))
+                        arrayPuntos.push(aux);
                 })
             }
             else {
-                arrayP.push(item);
+                arrayPuntos.push(item);
             }
         })
 
-        data_filter_PuntosM = arrayP;
+        data_filter_PuntosM = arrayPuntos;
 
         if (arrayMedidas.length !== 0) {
-            var arraySector = [];
-            var arrayServicio = [];
-            var arrayP = [];
+            let arraySector = [];
+            let arrayServicio = [];
+            let arrayP = [];
             arrayMedidas.forEach(medidaSelected => {
                 listMedidas.forEach(medidas => {
                     if (medidas.id === medidaSelected.value) {
                         medidas.puntos.forEach(punto => {
-                            var p = data_filter_PuntosM.find(p => p.id === punto)
+                            let p = data_filter_PuntosM.find(p => p.id === punto)
                             if (p) {
                                 arrayP.push(p);
                                 if (p.sectorID) {
                                     p.sectorID.forEach(item => {
-                                        var s = data_filter_Sectores.find(element => element.id === item)
+                                        let s = data_filter_Sectores.find(element => element.id === item)
                                         if (!arraySector.some(aux => aux.id === s.id))
                                             arraySector.push(s)
                                         s.servicioID.forEach(aux => {
-                                            var s = data_filter_Servicios.find(element => element.id === aux)
+                                            let s = data_filter_Servicios.find(element => element.id === aux)
                                             if (!arrayServicio.some(aux => aux.id === s.id))
                                                 arrayServicio.push(s)
                                         })
@@ -258,7 +259,7 @@ function Mapa() {
                                 }
                                 if (p.servicioID) {
                                     p.servicioID.forEach(item => {
-                                        var s = data_filter_Servicios.find(element => element.id === item)
+                                        let s = data_filter_Servicios.find(element => element.id === item)
                                         if (!arrayServicio.some(aux => aux.id === s.id))
                                             arrayServicio.push(s)
                                         if (!arraySector.some(aux => aux.id === p.id))
@@ -281,7 +282,7 @@ function Mapa() {
         if ((arrayServicios.length === 0 && arraySistemas.length !== 0 && arrayMedidas.length === 0) || (arrayServicios.length === 0 && arrayTiposSistemas.length !== 0 && arrayMedidas.length === 0)) {
             // filtrado por servicio si se selecciono un filtro de servicio
             data_filter_Servicios = data_filter_Servicios.filter(item => {
-                var bool = false;
+                let bool = false;
                 item.sectorID.forEach(element => {
                     if (data_filter_Sectores.find(index => index.id === element)) {
                         bool = true;
@@ -313,7 +314,6 @@ function Mapa() {
     // Muestra alarma en el boton flotante si hay filtros puestos
 
     const {
-        servicioSelect,
         data_to_show_Clientes,
         data_to_show_Servicios,
         data_to_show_Sectores,

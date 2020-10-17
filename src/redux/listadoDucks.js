@@ -107,9 +107,16 @@ export const getListadoAction = () => (dispatch) => {
             })
         })
 
+        const indexPuntos = puntos.reduce((acc, el) => ({
+            ...acc,
+            [el.id]: el
+        }), {})
+
+
         servicios.map(item => {
             item.puntoID.map(element => {
-                var punto = puntos.find(aux => aux.id === element)
+                // var punto = puntos.find(aux => aux.id === element)
+                var punto = indexPuntos[element]
                 sectores.push(punto)
             })
         })
