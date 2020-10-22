@@ -22,7 +22,8 @@ function App() {
   const listPuntosM = useSelector(store => store.listado.puntosList)
 
   useEffect(() => {
-    setTimeout(function () { dispatch(getListadoAction()) }, 3000);
+    // setTimeout(function () { dispatch(getListadoAction()) }, 3000);
+    dispatch(getListadoAction())
 
   }, [])
 
