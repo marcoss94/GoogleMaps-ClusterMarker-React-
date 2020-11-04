@@ -1,0 +1,21 @@
+.rightBarClose-container.active, .rightBarClose-container.desactive{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.rightBarClose-container {
+    /* margin-top: 10px; */
+    position: relative;
+    height: 100vh;
+    top: 7rem;
+    border-top: 1px solid #ffffff2f;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+}

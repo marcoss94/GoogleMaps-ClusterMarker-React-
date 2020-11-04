@@ -1,21 +1,37 @@
 @import url('http://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.app_container, .app_container.toggle {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 html {
   height: 100%;
+
+  background-color: #F5F5F5;
 }
 
 #root {
   height: 100%;
+
+  background-color: #F5F5F5;
 }
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Lato', sans-serif;
 }
 
 .app {
   height: 100%;
+  background-color: #F5F5F5;
 }
 
 /* * {
@@ -25,14 +41,15 @@ html {
   font-family: 'Lato', sans-serif;
 } */
 
-.contenedor {
+.app_container {
+  height: 100%;
+  margin-right: 50px;
   background-color: #F5F5F5;
-  position: absolute;
-  /* padding-left: 40px;
-  padding-right: 40px;
-  margin-left: auto;
-  margin-right: auto; */
-  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.app_container.toggle {
+  margin-right: 350px;
 }
 
 #icono {

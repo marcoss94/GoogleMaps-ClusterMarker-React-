@@ -1,0 +1,109 @@
+.dropDown-items, .nav-dropDown>.iconDropDown {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.nav-dropDown {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 16px;
+    width: 95%;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-radius: 10px;
+    z-index: 60;
+}
+
+.nav-dropDown.active {
+    background: linear-gradient(90deg, #1795A0 0%, #2ABAC8 100%);
+    color: #f5f5f5;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    cursor: pointer;
+    /* position: absolute; */
+    /* top: 0; */
+}
+
+.nav-dropDown.active>.iconDropDown {
+    transform: rotate(-180deg);
+}
+
+.iconDropDown{
+    font-size: 20px;
+}
+
+.nav-dropDown {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.dropDown-items {
+    display: none;
+    /* height: 0px; */
+    /* transition-property: height;
+    transition-duration: 2s; */
+    transform: translateY(-40px);
+}
+
+.dropDown-items {
+    background: #2187C5;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 16px;
+    width: 95%;
+    /* height: 100%; */
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: space-between; */
+    padding: 40px 0px 0px 16px;
+    border-radius: 10px;
+}
+
+.dropDown-items.active {
+    display: flex;
+    height: auto;
+    /* transform: translateY(0px); */
+}
+
+.ul-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropDown-item {
+    list-style: none;
+    padding: 16px;
+}
+
+.dropDown-item{
+    color: #D9D9D9;
+    cursor: pointer;
+}
+
+.dropDown-item:hover{
+    color: #fff;
+}
+
+.dropDown-container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-dropDown:hover {
+    background: linear-gradient(90deg, #1795A0 0%, #2ABAC8 100%);
+    color: #f5f5f5;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    cursor: pointer;
+}
+

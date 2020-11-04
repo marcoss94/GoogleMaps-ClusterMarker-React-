@@ -74,7 +74,7 @@ function Listado() {
     );
 
     return (
-        <div className="contenedor">
+
 
 
             <div className="container_ListadoList">
@@ -176,7 +176,6 @@ function Listado() {
                     </div>
                 )}
             </div>
-        </div>
     )
 }
 
