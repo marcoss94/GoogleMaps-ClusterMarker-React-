@@ -15,7 +15,7 @@ function RightBarOpen() {
     <div className="rightBarOpen-container">
       <div className="rightBarOpen-header">
         <div className="rightBarOpen-title">
-          <h3>Filtro</h3>
+          <h3>.</h3>
         </div>
         <div className="rightBarOpen-search">
           <AutoCompleteSearch rightBar={true} listAll={listPuntosM} />

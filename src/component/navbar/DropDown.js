@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../../css/DropDown.css";
 
 function DropDown({
@@ -7,6 +8,7 @@ function DropDown({
   iconDropDownDown,
   title,
   icon,
+  showSidebar,
 }) {
   const [drop, setDrop] = useState(false);
   const handleDropDown = () => {
@@ -31,18 +33,20 @@ function DropDown({
       </div>
 
       <div className={`dropDown-items ${drop ? "active" : ""}`}>
-        <ul className="ul-items">
+        <ul className="ul-items" onClick={showSidebar}>
           <li className="dropDown-item">
-            <span>asd</span>
+            <Link to="/listSistemas" id="dropDown-link">
+              <span>Todos</span>
+            </Link>
           </li>
           <li className="dropDown-item">
-            <span>asd</span>
+            <span>Tipo1</span>
           </li>
           <li className="dropDown-item">
-            <span>asd</span>
+            <span>Tipo2</span>
           </li>
           <li className="dropDown-item">
-            <span>asd</span>
+            <span>Tipo3</span>
           </li>
         </ul>
       </div>

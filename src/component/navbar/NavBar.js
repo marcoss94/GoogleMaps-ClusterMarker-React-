@@ -59,7 +59,7 @@ export default function NavBar(props) {
               return (
                 <li key={index} className={item.cName}>
                   {item.type === "dropDown" ? (
-                    <DropDown {...item} />
+                    <DropDown {...item} showSidebar={showSidebar} />
                   ) : (
                     <Link to={item.path} onClick={showSidebar}>
                       {item.icon}

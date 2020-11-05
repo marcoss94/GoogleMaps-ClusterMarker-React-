@@ -12,6 +12,7 @@
     right: 0px;
     z-index: 20;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+
 }
 
 .rightBar-barra {
@@ -61,7 +62,9 @@
     align-items: center;
     color: #fff;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(90deg, #1795A0 0%, #2ABAC8 100%);;
+    
+    /* background: linear-gradient(90deg, #1795A0 0%, #2ABAC8 100%); */
+    background: #2ABAC8;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }

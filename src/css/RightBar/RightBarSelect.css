@@ -1,0 +1,19 @@
+.rightBarSelect-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 90%;
+}
+
+.filtro-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: end;
+    text-align: start;
+}
+
+.filtro-item label{
+    font-size: 14px;
+    margin: 0;
+}

@@ -14,6 +14,7 @@ import "./css/marker.css";
 import "./css/Scroll.css";
 import Loader from "./component/Loader";
 import RightBar from "./component/rightBar/RightBar";
+import ListSistemas from "./pages/ListSistemas";
 
 function App() {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ function App() {
             <Route path="/mapa" component={Mapa} />
             <Route path="/listado" component={Listado} />
             <Route path="/tarjeta" component={Tarjeta} />
+            <Route path="/listSistemas" component={ListSistemas} />
             <Route path="/" exact component={Main} />
           </Switch>
         </div>

@@ -1,0 +1,355 @@
+.container_listSistemas {
+    position: relative;
+    top: 60px;
+    z-index: 10;
+}
+
+.container_list {
+    /* padding-top: 110px; */
+    display: flex;
+    /* position: relative; */
+    flex-direction: column;
+    /* padding-right: 20px;
+    padding-left: 20px; */
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    overflow: hidden;
+    /* margin: 10px; */
+    padding: 10px;
+}
+
+.container_fondo {
+    margin: 10px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.tableSistemas {
+    text-align: center;
+    margin: 1em auto;
+    background: white;
+    max-width: 1300px;
+    max-height: 70vh;
+    overflow: auto;
+    position: relative;
+    /* border-top: 1px solid #BDBDBD; */
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #BDBDBD;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 20;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.head_tittle {
+    width: 100%;
+    font-weight: 600;
+    text-align: start;
+}
+
+.head_tittle:last-child {
+    text-align: center;
+}
+
+.head_tittle:hover {
+    cursor: pointer;
+}
+
+.tableSistemas .body {
+    width: 100%;
+    position: relative;
+    border-spacing: 0;
+    font-size: 1.1em;
+}
+
+.tableSistemas .body .fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #E0E0E0;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.tableSistemas .body .fila:hover {
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(89.87deg, #52B1FF 0.1%, #1C9CFF 99.89%);
+}
+
+.tableSistemas .body .fila div {
+    width: 100%;
+    text-align: start;
+}
+
+.tableSistemas .body .fila div:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.tableSistemas .body .fila div p {
+    margin: 0;
+}
+
+.tableSistemas .body .fila div .buttonSmall {
+    margin: 0;
+    width: 100px;
+    background: #36C2CF;
+    /* color: #2ABAC8; */
+    /* border: 2px solid #2ABAC8; */
+}
+
+.tableSistemas .body .fila div .buttonSmall:hover {
+    /* border: 2px solid #2ABAC8; */
+    background: #fff;
+}
+
+/* ------------------------------------------------- */
+
+.tableSistemas table {
+    width: 100%;
+    position: relative;
+    border-spacing: 0;
+    font-size: 1.1em;
+}
+
+.tableSistemas table thead th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* font-weight: 500; */
+    background: #fff;
+    /* color: white; */
+    padding: 0.6em 1em;
+    font-size: 0.95em;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.tableSistemas table tbody td {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.tableSistemas table tbody tr {
+    margin-bottom: 5px;
+}
+
+.tableSistemas table thead th.col-fixed {
+    left: 0;
+    z-index: 100;
+}
+
+.tableSistemas table thead th:not(:last-child) {
+    border-right: 1px solid rgba(128, 128, 128, 0.151);
+}
+
+.tableSistemas table thead th:hover {
+    /* background: #254460; */
+    cursor: pointer;
+}
+
+.tableSistemas table thead th small {
+    margin-left: 0.2em;
+    font-size: 0.7em;
+}
+
+.tableSistemas table tbody td.col-fixed {
+    left: 0;
+    z-index: 90;
+}
+
+.tableSistemas table tbody tr .td_danger {
+    color: #d62828;
+    display: block;
+}
+
+.tableSistemas table tbody tr .td_warning {
+    color: #ffae0b;
+    display: block;
+}
+
+.tableSistemas table tbody tr .td_today {
+    color: #ffae0b;
+    display: block;
+}
+
+.tableSistemas table tbody tr .td_i {
+    display: none;
+}
+
+.tableSistemas table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tableSistemas table tbody tr td {
+    font-size: 0.87em;
+    padding: 0.4em 0.9em;
+    margin-bottom: 5px;
+    color: #0d0d0d;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.151);
+}
+
+.tableSistemas table tbody tr td p {
+    margin: 0;
+    /* border-bottom: 1px solid  rgba(128, 128, 128, 0.151); */
+}
+
+.tableSistemas table tbody tr {
+    background: #E0E0E0;
+}
+
+.tableSistemas table tbody tr td:first-child {
+    /* position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    z-index: 100; */
+}
+
+.tableSistemas table tbody tr td:last-child {
+    /* position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 100; */
+}
+
+.tableSistemas table tbody tr td:not(:last-child) {
+    /* border-right: 1px solid rgba(128, 128, 128, 0.151); */
+}
+
+.tableSistemas table tbody tr td.td:hover span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.tableSistemas table tbody tr td.td .unit {
+    font-size: 0.8em;
+}
+
+.tableSistemas table tbody tr td .date {
+    font-size: 0.95em;
+}
+
+.tableSistemas table tbody tr td .icon {
+    display: inline-block;
+    margin: 0 0.2em;
+}
+
+.tableSistemas table tbody tr td .icon i {
+    color: #ff9900;
+}
+
+.tableSistemas table tbody tr td .alert {
+    -webkit-animation: aparecer 2s infinite;
+    animation: aparecer 2s infinite;
+    color: #e68a00;
+}
+
+.tableSistemas table tbody tr td .date {
+    display: block;
+}
+
+.tableSistemas table tbody tr td .mensaje {
+    display: block;
+}
+
+.tableSistemas table tbody tr td.error_com {
+    background: #ff9900;
+    color: white;
+}
+
+.tableSistemas table tbody tr td.error_com i {
+    margin-right: 1em;
+}
+
+@media (max-width: 767px) {
+    .tableSistemas {
+        font-size: 0.95em;
+    }
+    .tableSistemas table {
+        width: 120%;
+    }
+    .tableSistemas table thead th {
+        font-size: 0.86em;
+        padding: 0.5em;
+    }
+    .tableSistemas table tbody tr td {
+        padding: 0.4em;
+    }
+    .tableSistemas table tbody tr td.address, .tableSistemas table tbody tr td.date {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 500px) {
+    .tableSistemas table {
+        width: 250%;
+    }
+}
+
+@media (max-width: 350x) {
+    .tableSistemas table {
+        width: 300%;
+    }
+}
+
+.pag {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+.page_number {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page_number input {
+    border-radius: 20px;
+    border: 1px solid #1795A0;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+}
+
+.page_number input:focus, .buttonSmall:focus {
+    outline: none;
+}
+
+.pag .buttonSmall {
+    outline: none;
+    border: 2px solid #1795A0;
+    background: #1795A0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pag .buttonSmall:hover {
+    background: #fff;
+}
+
+.pag .buttonSmall:active {
+    border: 2px solid #17565c;
+    transition: 0.1s;
+}

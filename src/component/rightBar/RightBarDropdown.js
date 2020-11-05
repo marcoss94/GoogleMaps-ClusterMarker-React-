@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../../css/RightBar/RightBarDropdown.css";
+import RightBarSelect from "./RightBarSelect";
 
-function RightBarDropdown({ icon, title, iconDropDownDown }) {
+function RightBarDropdown({ icon, title, iconDropDownDown, dropDownElement }) {
   const [drop, setDrop] = useState(false);
   const handleDropDown = () => {
     setDrop(!drop);
@@ -24,23 +25,8 @@ function RightBarDropdown({ icon, title, iconDropDownDown }) {
         </div>
       </div>
 
-      <div>
-        <div className={`dropDown-items ${drop ? "active" : ""}`}>
-          <ul className="ul-items">
-            <li className="dropDown-item">
-              <span>asd</span>
-            </li>
-            <li className="dropDown-item">
-              <span>asd</span>
-            </li>
-            <li className="dropDown-item">
-              <span>asd</span>
-            </li>
-            <li className="dropDown-item">
-              <span>asd</span>
-            </li>
-          </ul>
-        </div>
+      <div className={`dropDown-container ${drop ? "active" : ""}`}>
+        {dropDownElement}
       </div>
     </>
   );
