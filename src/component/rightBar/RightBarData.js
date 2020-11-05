@@ -26,7 +26,7 @@ export const RightBarData = [
   {
     title: "Tajetas",
     type: "link",
-    path: "/tarjeta",
+    path: "/Dropown del menu",
     icon: <BsIcons.BsGridFill />,
     cName: "nav-text",
   },

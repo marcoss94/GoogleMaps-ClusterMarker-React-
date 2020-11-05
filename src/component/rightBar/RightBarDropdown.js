@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../../css/RightBar/RightBarDropdown.css";
-import RightBarSelect from "./RightBarSelect";
 
 function RightBarDropdown({ icon, title, iconDropDownDown, dropDownElement }) {
   const [drop, setDrop] = useState(false);

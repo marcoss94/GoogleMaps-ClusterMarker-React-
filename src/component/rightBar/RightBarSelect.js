@@ -3,6 +3,7 @@ import Select from "react-select";
 import "../../css/RightBar/RightBarSelect.css";
 
 function RightBarSelect() {
+  // estilos del select
   const colourStyles = {
     control: (styles) => ({ ...styles, backgroundColor: "white" }),
 
@@ -27,6 +28,7 @@ function RightBarSelect() {
     }),
   };
 
+  // cargar los item de cada select
   const options = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },

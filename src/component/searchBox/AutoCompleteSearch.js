@@ -83,62 +83,10 @@ function AutoCompleteSearch(props) {
     }
 
     var htmlRender = [];
-    var servicio = suggestions.filter((item) => item.tipo === "servicio");
-    var sector = suggestions.filter((item) => item.tipo === "sector");
     var punto = suggestions.filter(
       (item) => item.tipo !== "servicio" && item.tipo !== "sector"
     );
 
-    if (servicio.length !== 0) {
-      htmlRender.push(
-        <div className="autoComplete__category">
-          <p>Servicios</p>
-        </div>
-      );
-      servicio.map((item) => {
-        htmlRender.push(
-          <li
-            className="autoComplete__items"
-            key={item.id}
-            onClick={() => suggestionSelected(item)}
-          >
-            <div className="autoComplete__element">
-              <p>{item.nombre}</p>
-              <img
-                id="autoComplete__icono"
-                alt="icono"
-                src={defineIcons(item)}
-              />
-            </div>
-          </li>
-        );
-      });
-    }
-    if (sector.length !== 0) {
-      htmlRender.push(
-        <div className="autoComplete__category">
-          <p>Sector</p>
-        </div>
-      );
-      sector.map((item) => {
-        htmlRender.push(
-          <li
-            className="autoComplete__items"
-            key={item.id}
-            onClick={() => suggestionSelected(item)}
-          >
-            <div className="autoComplete__element">
-              <p>{item.nombre}</p>
-              <img
-                id="autoComplete__icono"
-                alt="icono"
-                src={defineIcons(item)}
-              />
-            </div>
-          </li>
-        );
-      });
-    }
     if (punto.length !== 0) {
       htmlRender.push(
         <div className="autoComplete__category">
@@ -170,7 +118,6 @@ function AutoCompleteSearch(props) {
 
   window.addEventListener("click", function (e) {
     if (document.getElementById("autoComplete").contains(e.target)) {
-      console.log("asd");
     } else {
       // Clicked outside the box
       setVisibleSuggestions();

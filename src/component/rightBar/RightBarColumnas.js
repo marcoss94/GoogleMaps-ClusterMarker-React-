@@ -4,30 +4,7 @@ import * as FaIcons from "react-icons/fa";
 import "../../css/RightBar/RightBarSelect.css";
 
 function RightBarColumnas() {
-  const colourStyles = {
-    control: (styles) => ({ ...styles, backgroundColor: "white" }),
-
-    multiValue: (styles, { data }) => {
-      const color = "#2ABAC8";
-      return {
-        ...styles,
-        backgroundColor: color,
-      };
-    },
-    multiValueLabel: (styles, { data }) => ({
-      ...styles,
-      color: "white",
-    }),
-    multiValueRemove: (styles, { data }) => ({
-      ...styles,
-      color: "white",
-      ":hover": {
-        backgroundColor: "#1795A0",
-        color: "white",
-      },
-    }),
-  };
-
+  // Cambiar estos elementos por cada columna de la tabla listado
   const options = [
     { value: "Fecha", label: "Fecha" },
     { value: "Nombre", label: "Nombre" },

@@ -4,6 +4,7 @@ import * as FaIcons from "react-icons/fa";
 import "../../css/RightBar/RightBarSelect.css";
 
 function RightBarOrdenamiento() {
+  // estilos del select
   const colourStyles = {
     control: (styles) => ({ ...styles, backgroundColor: "white" }),
 
@@ -28,6 +29,7 @@ function RightBarOrdenamiento() {
     }),
   };
 
+  // Cargar item de los filtros
   const options = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },

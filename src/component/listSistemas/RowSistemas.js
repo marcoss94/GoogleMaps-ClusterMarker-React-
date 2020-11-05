@@ -2,6 +2,7 @@ import React from "react";
 
 function RowSistemas({ id, nombre }) {
   return (
+    //   Filas de la tabla sistemas
     <div
       className="fila"
       // onClick={this.handleSelect.bind(this, item.index)}

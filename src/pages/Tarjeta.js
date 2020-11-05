@@ -11,11 +11,6 @@ function Tarjeta() {
   return (
     <div className="container_tarjetaList">
       <div className="container_tarjeta">
-        {/* {Array(21).fill().map((_, i) => (
-                        <div key={i} className="tarjeta">
-                        </div>
-                    ))} */}
-
         {puntosList.map((item, index) => (
           <TarjetaShow key={index} item={item} />
         ))}

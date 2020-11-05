@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../../css/DropDown.css";
 
 function DropDown({
+  // Dropown del menu
   cNameDropDown,
   iconDropDownUp,
   iconDropDownDown,

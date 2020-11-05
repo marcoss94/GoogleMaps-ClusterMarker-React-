@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import Loader from "../component/Loader";
 import { llenarMedidas, llenarTipos } from "../funtions/Funtions";
 import FormatMarkers from "../funtions/FormatMarkers";
 import Map from "../component/Map";
-import Flotante from "../component/Flotante";
-import FiltroFlotante from "../component/FiltroFlotante";
 import ShowModal from "../component/modals/ShowModal";
 
 import { useSelector } from "react-redux";
 
 function Mapa() {
+  // Carga de datos del store
   const listClientes = useSelector((store) => store.listado.clientesList);
   const listServicios = useSelector((store) => store.listado.serviciosList);
   const listSectores = useSelector((store) => store.listado.sectoresList);
@@ -44,6 +43,7 @@ function Mapa() {
 
   // }, [])
 
+  // Carga de filtros
   const handleArray = (value, arrayType) => {
     if (arrayType === "servicio") {
       if (value !== null && value?.length !== 0) {
@@ -351,27 +351,6 @@ function Mapa() {
                 changeFiltro_visible={changeFiltro_visible}
 
             /> */}
-
-      <FiltroFlotante
-        setArrayClientes={handleArray}
-        setArrayServicios={handleArray}
-        setArrayTiposSistemas={handleArray}
-        setArraySistemas={handleArray}
-        setArrayMedidas={handleArray}
-        // setArraySectores={handleArray}
-        arrayServicios={arrayServicios}
-        arraySistemas={arraySistemas}
-        arrayTiposSistemas={arrayTiposSistemas}
-        arrayMedidas={arrayMedidas}
-        arrayClientes={arrayClientes}
-        filtro_visible={filtro_visible}
-        listServicios={data_to_show_Servicios}
-        listSectores={data_to_show_Sectores}
-        listPuntosM={data_to_show_PuntosM}
-        listTiposSistemas={data_to_show_tiposSistemas}
-        listClientes={data_to_show_Clientes}
-        listMedidas={medidas_to_show}
-      />
 
       {markers.length !== 0 && current_point && (
         <ShowModal

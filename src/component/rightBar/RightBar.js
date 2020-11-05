@@ -5,6 +5,7 @@ import RightBarClose from "./RightBarClose";
 import { ToggleButton } from "./Toggle";
 
 function RightBar({ handleToggle, toggle }) {
+  // barra lateral derecha
   return (
     <>
       <section className="rightBar-container">
